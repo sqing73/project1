@@ -1,10 +1,17 @@
 import pymongo
+from pymongo import MongoClient
 
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-mydb = myclient["test"]
+client = MongoClient(host="test_mongodb",
+                       port=27017,
+)
+                    #    username="root",
+                    #    password="pass",
+                    #    authsource="admin")
 
-mycol = mydb["reminder"]
+db = client["reminder_db"]
+
+col = db["reminder"]
 
 def get_all_reminders():
-    reminders = mycol.find({}, {"_id":0})
+    reminders = col.find({}, {"_id":0})
     return list(reminders)
