@@ -2,7 +2,7 @@
 
 Python Flask + Mongodb
 
-This is a application to help you set you daily reminder. It can save the date and information of a reminder. If you are done with a reminder, you can also
+This is a application to help you set you daily reminder. It can save the date and information of a reminder. If you are done with a reminder, you can also toggle the *done* field.
 
 ## Progress
 I have set up the project environment and containerize the project. Currently, the API to get all reminders is available.
